@@ -4328,7 +4328,7 @@ yh.prototype.load = function(b, g, m, k) {
     if (null == b)
         return Promise.resolve();
     /* Insert your own language - Gameblabla*/
-    var a = k + "messages.en.nocache.json"
+    var a = k + "messages.zh-CN.nocache.json"
       , n = new ae;
     n.HQ = "text";
     
