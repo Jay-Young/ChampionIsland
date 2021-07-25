@@ -3816,11 +3816,18 @@ var yh = function() {
 yh.prototype.load = function(b, g, m, k) {
     var c = this;
     b = zh(this, b, g, m);
+    if (null == b)
         return Promise.resolve();
     /* Insert your own language - Gameblabla*/
     var a = k + "messages.zh-CN.nocache.json"
       , n = new ae;
     n.HQ = "text";
+    return new Promise(function(h, d) {
+        Hc(n, "success", function() {
+            try {
+                var e = n.ha ? n.ha.responseText : ""
+            } catch (f) {
+                e = ""
             }
             c.Ca = JSON.parse(e.substring(5));
             h()
